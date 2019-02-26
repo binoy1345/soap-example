@@ -1,0 +1,21 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+				  xmlns:gs="http://spring.io/guides/gs-producing-web-service">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:updateCountriesRequest>
+	 <gs:countries>
+		 <gs:name>Pakistan</gs:name>
+		 <gs:capital>Islamabad</gs:capital>
+		 <gs:population>18299</gs:population>
+		 <gs:currency>PNR</gs:currency>	
+	</gs:countries>
+	<gs:countries>
+		 <gs:name>India</gs:name>
+		 <gs:capital>New Delhi</gs:capital>
+		 <gs:population>1348299</gs:population>
+		 <gs:currency>INR</gs:currency>
+	 </gs:countries>
+         
+      </gs:updateCountriesRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
