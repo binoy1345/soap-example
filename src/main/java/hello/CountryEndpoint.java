@@ -11,9 +11,9 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import io.spring.guides.gs_producing_web_service.Countries;
 import io.spring.guides.gs_producing_web_service.Country;
-import io.spring.guides.gs_producing_web_service.CountryAsRequest;
 import io.spring.guides.gs_producing_web_service.GetCountryRequest;
 import io.spring.guides.gs_producing_web_service.GetCountryResponse;
+import io.spring.guides.gs_producing_web_service.UpdateCountryRequest;
 
 @Endpoint
 public class CountryEndpoint {
@@ -34,7 +34,7 @@ public class CountryEndpoint {
 
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "updateCountryRequest")
 	@ResponsePayload
-	public GetCountryResponse updateCountry(@RequestPayload CountryAsRequest request) {
+	public GetCountryResponse updateCountry(@RequestPayload UpdateCountryRequest request) {
 		GetCountryResponse response = new GetCountryResponse();
 		Country country = request.getCountry();
 		countryRepository.save(setValuesToDao(country));
