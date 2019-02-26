@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @Entity
 @Table(name="country")
-public class CountryDao {
+public class CountryEntity {
 
 	@Id
 	protected int id;

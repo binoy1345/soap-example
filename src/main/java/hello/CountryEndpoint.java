@@ -26,7 +26,7 @@ public class CountryEndpoint {
 	@ResponsePayload
 	public GetCountryResponse getCountry(@RequestPayload GetCountryRequest request) {
 		GetCountryResponse response = new GetCountryResponse();
-		CountryDao countryDao=countryRepository.findCountryByName(request.getName()).get();
+		CountryEntity countryDao=countryRepository.findCountryByName(request.getName()).get();
 		response.setCountry(getValuesFromDao(countryDao));
 
 		return response;
@@ -51,8 +51,8 @@ public class CountryEndpoint {
 		});
 	}
 	
-	private CountryDao setValuesToDao(Country country) {
-		CountryDao countryDao = new CountryDao();
+	private CountryEntity setValuesToDao(Country country) {
+		CountryEntity countryDao = new CountryEntity();
 		countryDao.setName(country.getName());
 		countryDao.setPopulation(country.getPopulation());
 		countryDao.setCapital(country.getCapital());
@@ -60,7 +60,7 @@ public class CountryEndpoint {
 		return countryDao;
 	}
 	
-	private Country getValuesFromDao(CountryDao countryTao) {
+	private Country getValuesFromDao(CountryEntity countryTao) {
 		Country country = new Country();
 		country.setName(countryTao.getName());
 		country.setPopulation(countryTao.getPopulation());
