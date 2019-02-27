@@ -1,4 +1,4 @@
-package hello;
+package org.bys;
 
 
 import java.util.List;
@@ -45,7 +45,7 @@ public class CountryEndpoint {
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "updateCountriesRequest")
 	@ResponsePayload
 	public void updateCountries(@RequestPayload Countries request) {
-		List<Country> countries = request.getCountries();
+		List<Country> countries = request.getCountry();
 		countries.stream().forEach(country->{
 			countryRepository.save(setValuesToDao(country));
 		});

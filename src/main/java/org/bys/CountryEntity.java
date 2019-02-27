@@ -6,7 +6,7 @@
 //
 
 
-package hello;
+package org.bys;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

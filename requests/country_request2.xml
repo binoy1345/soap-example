@@ -3,19 +3,18 @@
    <soapenv:Header/>
    <soapenv:Body>
       <gs:updateCountriesRequest>
-	 <gs:countries>
+	 <gs:country>
 		 <gs:name>Pakistan</gs:name>
 		 <gs:capital>Islamabad</gs:capital>
 		 <gs:population>18299</gs:population>
 		 <gs:currency>PNR</gs:currency>	
-	</gs:countries>
-	<gs:countries>
+	</gs:country>
+	<gs:country>
 		 <gs:name>India</gs:name>
 		 <gs:capital>New Delhi</gs:capital>
 		 <gs:population>1348299</gs:population>
 		 <gs:currency>INR</gs:currency>
-	 </gs:countries>
-         
+	 </gs:country>
       </gs:updateCountriesRequest>
    </soapenv:Body>
 </soapenv:Envelope>

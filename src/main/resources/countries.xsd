@@ -35,7 +35,7 @@
     
     <xs:complexType name="countries">
             <xs:sequence>
-               <xs:element minOccurs="1" maxOccurs="unbounded" name="countries" nillable="false" type="tns:country" />
+               <xs:element minOccurs="0" maxOccurs="unbounded" name="country" nillable="false" type="tns:country" />
             </xs:sequence>
     </xs:complexType>
 
